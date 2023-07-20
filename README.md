@@ -1,5 +1,5 @@
 # ゲーム のタイトル
-Step Up kokaton
+Step Up Kokaton
 
 
 ## 実行環境の必要条件
