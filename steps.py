@@ -206,14 +206,14 @@ def main():
         if jump == True:  # 初期状態を除いて
             if len(pg.sprite.spritecollide(player,steps , False)) == 0 or limit.limit < 1:  #階段に乗っていないときか制限時間が0のとき
                 if score.score >= 4:  # 地上を離れていたら
-                    screen.blit(bg_img2, [0, 0])  # 空の背景を描画
+                    screen.blit(bg_img2, [0, by])  # 空の背景を描画
                 else:
                     screen.blit(bg_img, [0, by])  # 地上の背景を描画
                 steps.update(screen)  # 階段を描画
                 score.score_up(-1)  # スコアを1減らして
                 score.update(screen)  # スコアを描画
                 limit.update(screen)  # 制限時間を描画
-                player.change_img(screen)  #失敗画像に変更
+                player.change_img(screen)  # 失敗画像に変更
                 font = pg.font.SysFont("hgp創英角ポップ体", 200)
                 color = (0, 0, 255)  # 青色
                 image = font.render("GameOver", 0, color)
